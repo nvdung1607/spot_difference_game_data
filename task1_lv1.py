@@ -46,7 +46,7 @@ if file_path:
     result = np.hstack((img_origin, img))
     # cv2.imshow("Image", img_origin)
     # cv2.imshow("Image", img)
-    cv2.imshow("Image", result)
+    cv2.imshow("Result", result)
     
     cv2.waitKey(0)
     cv2.destroyAllWindows()

@@ -85,7 +85,7 @@ if file_path:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
     
-     #Xuất hình ảnh
+    #Xuất hình ảnh
     # Lấy tên file và đường dẫn đến thư mục chứa file
     file_name = os.path.basename(file_path)
     file_dir = os.path.dirname(file_path)

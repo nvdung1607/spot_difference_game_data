@@ -38,7 +38,7 @@ if file_path:
     # contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-    # Lưu các contour có diện tích lớn hơn 300 vào danh sách objects
+    # Lưu các contour có diện tích 300 đến 100 vào danh sách objects
     objects = []
     for contour in contours:
         area = cv2.contourArea(contour)
@@ -51,6 +51,8 @@ if file_path:
 
     # Chọn ngẫu nhiên một đối tượng từ danh sách objects
     selected_contour = random.choice(objects)
+    
+    #Đổi màu bằng màu trung bình
     mean_bgr = cv2.mean(selected_contour)
     cv2.drawContours(img, [selected_contour],-1, mean_bgr, -2)
     
